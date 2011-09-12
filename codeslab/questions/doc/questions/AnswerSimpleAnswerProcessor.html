@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class AnswerSimpleAnswerProcessor</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class AnswerSimpleAnswerProcessor</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p><pre> 简单题，每个答案独占一行
+
+ 题型模板：
+ <ul>
+ <li>题号定义：半角数字形式，支持的修饰符有<u>()（）、.．</u>符号有全半角之分，所有前缀修饰符均可选，至少要有一个后缀修饰符，必须位于行首</li>
+ <li>答案定义：匹配当前行除题号之外的所有内容</li>
+ </ul>
+ 题型举例：
+
+ 1．实验针灸学科学方法论，即是关于实验针灸学科学研究方法的理论。探索实验针灸学方法的一般结构、阐述它们的发展趋势和方向，以及实验针灸学科学研究中各种方法的相互关系等问题。狭义的仅指自然科学方法论，即研究自然科学中的一般方法，如观察法、实验法等。广义的则是指哲学方法论，即研究科学认识过程、方法和形式的一般理论问题，如科学理论的发现、构建、检验、评价、预测、决策等。
+ 2．科学实验是指自然科学实验，即根据一定目的，运用相应的仪器、设备等物质手段，在人为控制的条件下，模拟自然现象，以进行研究的方法。以认识自然界事物的本质和规律为目的和任务。它包括实验者、实验手段和实验对象三要素。
+ 3．软科学是研究中医针灸学发展，并对科学技术体系及其各个环节进行预测、规划、管理、指挥和监督，使之有机地配合，极大限度地发挥整体优势，综合多学科和科学研究方法进行跨学科研究的科学。</pre></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> KNIGHTRCOM</li>
+				<li><span class="field">version:</span> 0.9</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_meta---answer_simple_answer_processor.class.php.html">/meta/answer_simple_answer_processor.class.php</a> (line <span class="field"><a href="../__filesource/fsource_questions__metaanswer_simple_answer_processor.class.php.html#a21">21</a></span>)
+		</p>
+		
+				
+		<pre><a href="../questions/AnswerBaseProcessor.html">AnswerBaseProcessor</a>
+   |
+   --AnswerSimpleAnswerProcessor</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#defineStyles" title="details" class="method-name">defineStyles</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../questions/AnswerBaseProcessor.html">AnswerBaseProcessor</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../questions/AnswerBaseProcessor.html#var$_sectionText">AnswerBaseProcessor::$_sectionText</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../questions/AnswerBaseProcessor.html#var$_styles">AnswerBaseProcessor::$_styles</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methoddefineStyles" id="defineStyles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">defineStyles</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaanswer_simple_answer_processor.class.php.html#a23">23</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			defineStyles
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../questions/AnswerBaseProcessor.html#methoddefineStyles">AnswerBaseProcessor::defineStyles()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaanswer_simple_answer_processor.class.php.html#a28">28</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parse
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../questions/AnswerBaseProcessor.html#methodparse">AnswerBaseProcessor::parse()</a></dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../questions/AnswerBaseProcessor.html">AnswerBaseProcessor</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#method__construct">AnswerBaseProcessor::__construct()</a></span><br>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#methoddefineStyles">AnswerBaseProcessor::defineStyles()</a></span><br>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#methodembedText">AnswerBaseProcessor::embedText()</a></span><br>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#methodparse">AnswerBaseProcessor::parse()</a></span><br>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#methodpatterning">AnswerBaseProcessor::patterning()</a></span><br>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#method__get">AnswerBaseProcessor::__get()</a></span><br>
+													<span class="method-name"><a href="../questions/AnswerBaseProcessor.html#method__set">AnswerBaseProcessor::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 18 Aug 2010 02:01:30 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

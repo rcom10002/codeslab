@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class QuestionBaseProcessor</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class QuestionBaseProcessor</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p><pre> 对于整张卷子，需要按照以下形式来对题型进行划分，这样程序才可以针对题型执行自动导入
+
+ XX年 YY考试官方试题
+ ===<<<单选题>>>===
+ 1. ……
+ 2. ……
+ 3. ……
+ ===<<<单选题>>>===
+ ===<<<填空题>>>===
+ 4. ……
+ 5. ……
+ ===<<<填空题>>>===
+ ===<<<简答题>>>===
+ 6. ……
+ 7. ……
+ 8. ……
+ 9. ……
+ ===<<<简答题>>>===</pre></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> KNIGHTRCOM</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">see:</span> <a href="../questions/QuestionType.html">QuestionType</a></li>
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_meta---question_base_processor.class.php.html">/meta/question_base_processor.class.php</a> (line <span class="field"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a28">28</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionClozeTestProcessor.html">QuestionClozeTestProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionCompletionProcessor.html">QuestionCompletionProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionMultipleChoiceProcessor.html">QuestionMultipleChoiceProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionShortAnswerProcessor.html">QuestionShortAnswerProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionSimpleAnswerProcessor.html">QuestionSimpleAnswerProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionSingleChoiceProcessor.html">QuestionSingleChoiceProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../questions/QuestionTrueOrFalseProcessor.html">QuestionTrueOrFalseProcessor</a></td>
+					<td>
+											
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_sectionText" title="details" class="var-name">$_sectionText</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_styles" title="details" class="var-name">$_styles</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																												
+												<div class="method-definition">
+											<span class="method-result">QuestionBaseProcessor</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#defineStyles" title="details" class="method-name">defineStyles</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../questions/QuestionBaseProcessor.html">QuestionBaseProcessor</a></span>
+										<a href="#embedText" title="details" class="method-name">embedText</a>
+											(<span class="var-type">$sectionText</span>&nbsp;<span class="var-name">$sectionText</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#patterning" title="details" class="method-name">patterning</a>
+											(<span class="var-type">$styles</span>&nbsp;<span class="var-name">$styles</span>, [<span class="var-type">$modifers</span>&nbsp;<span class="var-name">$modifers</span> = <span class="var-default">'um'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">$name</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">$name</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">$value</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_sectionText" id="$_sectionText"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_sectionText</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_styles" id="$_styles"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_styles</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a34">34</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">QuestionBaseProcessor</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddefineStyles" id="defineStyles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">defineStyles</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a38">38</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			defineStyles
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../questions/QuestionClozeTestProcessor.html#methoddefineStyles">QuestionClozeTestProcessor::defineStyles()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionCompletionProcessor.html#methoddefineStyles">QuestionCompletionProcessor::defineStyles()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionMultipleChoiceProcessor.html#methoddefineStyles">QuestionMultipleChoiceProcessor::defineStyles()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionShortAnswerProcessor.html#methoddefineStyles">QuestionShortAnswerProcessor::defineStyles()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionSimpleAnswerProcessor.html#methoddefineStyles">QuestionSimpleAnswerProcessor::defineStyles()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionSingleChoiceProcessor.html#methoddefineStyles">QuestionSingleChoiceProcessor::defineStyles()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionTrueOrFalseProcessor.html#methoddefineStyles">QuestionTrueOrFalseProcessor::defineStyles()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodembedText" id="embedText"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">embedText</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a46">46</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../questions/QuestionBaseProcessor.html">QuestionBaseProcessor</a></span>
+		<span class="method-name">
+			embedText
+		</span>
+					(<span class="var-type">$sectionText</span>&nbsp;<span class="var-name">$sectionText</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$sectionText</span>
+				<span class="var-name">$sectionText</span><span class="var-description">: string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a40">40</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parse
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../questions/QuestionClozeTestProcessor.html#methodparse">QuestionClozeTestProcessor::parse()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionCompletionProcessor.html#methodparse">QuestionCompletionProcessor::parse()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionMultipleChoiceProcessor.html#methodparse">QuestionMultipleChoiceProcessor::parse()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionShortAnswerProcessor.html#methodparse">QuestionShortAnswerProcessor::parse()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionSimpleAnswerProcessor.html#methodparse">QuestionSimpleAnswerProcessor::parse()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionSingleChoiceProcessor.html#methodparse">QuestionSingleChoiceProcessor::parse()</a>
+							</li>
+					<li>
+				<a href="../questions/QuestionTrueOrFalseProcessor.html#methodparse">QuestionTrueOrFalseProcessor::parse()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodpatterning" id="patterning"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">patterning</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a58">58</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">create pattern</p>
+<p class="description"><p>create pattern</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			patterning
+		</span>
+					(<span class="var-type">$styles</span>&nbsp;<span class="var-name">$styles</span>, [<span class="var-type">$modifers</span>&nbsp;<span class="var-name">$modifers</span> = <span class="var-default">'um'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$styles</span>
+				<span class="var-name">$styles</span><span class="var-description">: mixed array or string</span>			</li>
+					<li>
+				<span class="var-type">$modifers</span>
+				<span class="var-name">$modifers</span><span class="var-description">: string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__get</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">$name</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$name</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__set</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_base_processor.class.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">$name</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">$value</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$name</span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type">$value</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 18 Aug 2010 02:01:41 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

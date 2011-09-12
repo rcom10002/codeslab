@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class QuestionShortAnswerProcessor</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class QuestionShortAnswerProcessor</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="description"><p><pre> 简答题，有大Question，大Question内部嵌套小Question，所有Question只有文本内容，均无Option
+
+ 题型模板：
+ <ul>
+ <li>小题号定义：半角数字形式，支持的修饰符有<u>()（）、.．</u>符号有全半角之分，前缀修饰符可选，必须位于行首</li>
+ <li>注意：每个问题必须独占一行，忽略大题号定义</li>
+ </ul>
+ 题型举例：
+
+ ===<<<简答题>>>===
+ 胡锦涛在十七大报告中指出，在新的发展阶段，继续全面建设小康社会，发展中国特色社会主义，必须坚持以邓小平理论、“三个代表”重要思想为知道，深入贯彻落实科学发展观。科学发展观是同马列主义、毛泽东思想、邓小平理论、“三个代表”重要思想既一脉相承又与时俱进的科学理论，是我国经济社会发展的重要指导方针，是发展中国特色社会主义必须坚持和贯彻的重大战略思想。
+ ===<<<问题描述结束>>>===
+ 1. 简述科学发展观的主要内容。（12分）
+ 2. 联系实际，你认为应如何来落实科学发展观？（10分）
+ ===<<<问题结束>>>===
+ 资源短缺和市场有限往往制约着一个国家的发展。历史上，许多国家为了获取资源、争夺市场采用了非和平的手段。我国政府明确指出，中国坚持走和平发展道路。完成下列问题。
+ ===<<<问题描述结束>>>===
+ （1）以一种陆地资源为例。说明其特点和分布规律。（10分）
+ （2）结合材料和所学知识。概括说明19世纪末欧洲列强激烈争夺殖民地的原因。这种强烈争压最终导致了什么结果？（8分）
+ （3）分析说明上表。（2分）
+ （4）中国走和平发展道路，应该选择不打贸易战，追求第四种结果。请说明这种选择的经济学理由。（8分）
+ ===<<<问题结束>>>===
+ ===<<<简答题>>>===</pre></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> KNIGHTRCOM</li>
+				<li><span class="field">version:</span> 0.9</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_meta---question_short_answer_processor.class.php.html">/meta/question_short_answer_processor.class.php</a> (line <span class="field"><a href="../__filesource/fsource_questions__metaquestion_short_answer_processor.class.php.html#a33">33</a></span>)
+		</p>
+		
+				
+		<pre><a href="../questions/QuestionBaseProcessor.html">QuestionBaseProcessor</a>
+   |
+   --QuestionShortAnswerProcessor</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#defineStyles" title="details" class="method-name">defineStyles</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parse" title="details" class="method-name">parse</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../questions/QuestionBaseProcessor.html">QuestionBaseProcessor</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../questions/QuestionBaseProcessor.html#var$_sectionText">QuestionBaseProcessor::$_sectionText</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../questions/QuestionBaseProcessor.html#var$_styles">QuestionBaseProcessor::$_styles</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methoddefineStyles" id="defineStyles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">defineStyles</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_short_answer_processor.class.php.html#a35">35</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			defineStyles
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../questions/QuestionBaseProcessor.html#methoddefineStyles">QuestionBaseProcessor::defineStyles()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodparse" id="parse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parse</span> (line <span class="line-number"><a href="../__filesource/fsource_questions__metaquestion_short_answer_processor.class.php.html#a41">41</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parse
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../questions/QuestionBaseProcessor.html#methodparse">QuestionBaseProcessor::parse()</a></dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../questions/QuestionBaseProcessor.html">QuestionBaseProcessor</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#method__construct">QuestionBaseProcessor::__construct()</a></span><br>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#methoddefineStyles">QuestionBaseProcessor::defineStyles()</a></span><br>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#methodembedText">QuestionBaseProcessor::embedText()</a></span><br>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#methodparse">QuestionBaseProcessor::parse()</a></span><br>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#methodpatterning">QuestionBaseProcessor::patterning()</a></span><br>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#method__get">QuestionBaseProcessor::__get()</a></span><br>
+													<span class="method-name"><a href="../questions/QuestionBaseProcessor.html#method__set">QuestionBaseProcessor::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 18 Aug 2010 02:01:51 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

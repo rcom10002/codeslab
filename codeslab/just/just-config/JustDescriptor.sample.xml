@@ -1,0 +1,92 @@
+<JustDescriptor>
+  <!-- BlueGroups Home     => https://bluepages.ibm.com/tools/groups -->
+  <!-- BlueGroups Java API => http://tst2bluepages.mkm.can.ibm.com/directory/bluegroups/api.shtml -->
+  <props>
+    <!-- common information -->
+    <property name="PTT_API_URI_USERS" value="http://pttapi.pok.ibm.com/pttapi/core-ptt/user/role/"/>
+    <!-- the root group where you want to create your sub group list -->
+    <property name="ROOT_GROUP_ON_BLUE_GROUP" value="pttbicc"/>
+    <!-- BE CAREFUL ABOUT THIS OPTION! clear all or just the ones to be created. Only values "true/false" are supported. -->
+    <property name="CLEAR_ALL_GROUPS_OF_ROOT_GROUP" value="false"/>
+    <!-- when the user added to blue group should be expired -->
+    <property name="EXPIRATION_DATE" value="2020-12-31"/>
+    <!-- max times that allows failures for network problem -->
+    <property name="MAX_TRIES" value="9"/>
+    <!-- how long it could be delayed to execute the next tries -->
+    <property name="INTERVAL_TRIES" value="3000"/>
+    <!-- is it a test mode or a production mode, only "true" or "false" are supported, test mode just adds a little records but not all -->
+    <property name="TEST_ONLY" value="false"/>
+    <!-- validation information, ask PTTAIP admin for the following info -->
+    <property name="username" value="pttadmin@us.ibm.com"/>
+    <property name="password" value="******"/>
+    <property name="User-Agent" value="PTT-Core/0.1"/>
+    <property name="X-PTT-API-Key" value="******"/>
+    <!-- bulk processing information -->
+    <property name="ENABLE_BULK_PROCESS" value="true"/><!-- whether to use a batch process -->
+    <property name="TEMP_FILE_DIR" value="./just-config/tmp/"/><!-- this directory should be readable and writable -->
+    <property name="BULK_PROCESSOR" value="cwa2"/><!-- only 'cwa2' or 'ed' is used here, cwa2 is not recommanded by blue group API -->
+    <!-- If 'ed' is used here the information below is mandatory -->
+    <property name="BULK_PROPERTIES_DIR" value="./just-config/"/>
+    <property name="BULK_PROPERTIES_FILES" value="./just-config/cwa2bulk.properties"/>
+  </props>
+  <!-- key means what group you want to create -->
+  <!-- val means which roles you want to contain, and multiple roles should be split by comma -->
+  <groupMapping>
+    <com.ibm.ptt.just.meta.MetaEntry>
+      <key>pttbiccmanager</key>
+      <val>63</val>
+      <desc>Center Manager</desc>
+    </com.ibm.ptt.just.meta.MetaEntry>
+    <com.ibm.ptt.just.meta.MetaEntry>
+      <key>pttbiccwdl</key>
+      <val>62</val>
+      <desc>WDL</desc>
+    </com.ibm.ptt.just.meta.MetaEntry>
+    <!-- 
+    <com.ibm.ptt.just.meta.MetaEntry>
+      <key>pttbicc Test WB</key>
+      <val>6,9</val>
+      <desc></desc>
+    </com.ibm.ptt.just.meta.MetaEntry>
+    <com.ibm.ptt.just.meta.MetaEntry>
+      <key>pttbicc Test QA</key>
+      <val>8</val>
+      <desc></desc>
+    </com.ibm.ptt.just.meta.MetaEntry>
+    -->
+  </groupMapping>
+  <skipRule>
+    <!-- if you want to disable this rule, just make function skip_user to return false -->
+    <![CDATA[// JavaScript
+      /**
+       * @arr an array or a string of csv format
+       * @val the target value to search
+       */
+      function inArray(arr, val) {
+        if (arr instanceof Array) {
+          arr = arr.join(',');
+        }
+        arr = ',' + arr + ',';
+        return arr.indexOf(',' + val + ',') > -1;
+      }
+
+      // Only users of the specified roles are restricted to the specified SPD. Other users should be added regardless of their SPD.
+      var roles = '5,62';
+      var spds = '29,30,88,94,96,97,98,99,101,103,104,105,106,107,108,111,118,119,120,143,152,154,155,162,166,171,173,174,176,177,180,200,201';
+
+      /**
+       * The value of function 'skip_user' determines whether to skip the current user record
+       */
+      function skip_user() {
+        // Variable "user" is an input parameter from Java and its visible scope is global.
+        if (inArray(roles, user.primaryRole.id)) {
+          if (inArray(spds, user.spdId)) {
+            return false;
+          }
+          return true;
+        }
+        return false;
+      };
+    ]]>
+  </skipRule>
+</JustDescriptor>
