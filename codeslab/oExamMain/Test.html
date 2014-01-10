@@ -1,0 +1,68 @@
+<html>
+<body>
+	<p>
+		<input type="button" value="Check client application" onclick="javascript:CheckApp();" />
+		<input type="button" value="Close client application" onclick="javascript:CloseApp();" />
+	</p>
+	<p>
+		<input type="radio" name="AppResquestToExit" value="1" checked="checked" />Fail to submit
+	</p>
+	<p>
+		<input type="radio" name="AppResquestToExit" value="2" />Sucs to submit
+	</p>
+	<p>
+		<input type="button" value="Show Exit Button" onclick="javascript:hideClientExitButton(false);" />
+		<input type="button" value="Hide Exit Button" onclick="javascript:hideClientExitButton(true);" />
+	</p>
+	<p>
+		<!--<textarea id="cacheData" rows="20" style="width:80%;"></textarea>-->
+		<input type="text" id="cacheData" style="width:80%;" />
+		<input type="button" value="Get Cache" onclick="javascript:document.getElementById('cacheData').value = window.CACHE;" />
+		<input type="button" value="Set Cache" onclick="javascript:window.CACHE = document.getElementById('cacheData').value;" />
+		<input type="button" value="Set Cache > 65535" onclick="javascript:window.CACHE = (function () { var c = document.getElementById('cacheData').value; if (c) { while (c.length < 90000) c += c; } return c; } ());" />
+	</p>
+	<hr /><p id="alertContainer">交互信息显示区</p><hr />
+<script>
+var isDebug = true;
+
+function CheckApp() {
+	alert(window.sExamVersion);
+}
+
+function CloseApp() {
+	alert('close app');
+	window.sExamEndNow = true;
+}
+
+function examSubmitPapr() {
+	// if paper is not submit
+	if (document.getElementsByName('AppResquestToExit')[1].checked) {
+		alert('submit paper now');
+		return true;
+	} else {
+		alert('failed to submit paper, please try later');
+		return false;
+	}
+}
+
+function hideClientExitButton(show) {
+	window.sExamExitCommandHide = show;
+}
+
+if (isDebug) {
+	// 覆盖默认的alert行为
+	window.alert = function (msg) {
+		document.getElementById("alertContainer").innerHTML = new Date().getTime() + ": " + msg;
+	};
+}
+</script>
+<p style="color:red;">
+备注（仅供参考）：<br>
+<ul>
+<li>不可以使用alert/confirm/prompt这样的模态窗口，否则会与主窗口冲突，此问题与WebBrowser控件的实现有关，QWebView没有，请避免使用。（这个错误已经通过屏蔽VB错误代码解决。但在模态窗体下，无法使用窗口最前显示的屏蔽功能。具体实现请权衡利弊！）</li>
+<li>自定义的alert实现与系统alert区别在于不可以实现代码阻塞。</li>
+<li>缓存只有在页面onload之后50毫秒内才能够读取到页面变量CACHE中，之后无法重新读取，setTimeout可以用于延时读取；写入操作可以反复执行，每隔50毫秒写入一次至INI文件。</li>
+<li>缓存写入时，对于【\/'"】四个字符需要转义，建议采用全角字符进行过滤、替代。</li>
+</p>
+</body>
+</html>
