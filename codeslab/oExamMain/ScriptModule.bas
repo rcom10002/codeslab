@@ -40,7 +40,6 @@ Public Sub DisableBrowserFresh(ByVal wb As webBrowser)
     snippet = ""
     snippet = snippet & "var postDocKeydownHandler = document.onkeydown;                          "
     snippet = snippet & "document.onkeydown = function (event) {                                  "
-    snippet = snippet & "    if (postDocKeydownHandler) { postDocKeydownHandler(event); }         "
     snippet = snippet & "    event = event || window.event;                                       "
     snippet = snippet & "    if (    /*(event.keyCode==8)   ||                  /* ÆÁ±ÎÍË¸ñÉ¾³ý¼ü */"
     snippet = snippet & "            (event.keyCode==116) ||                  /* ÆÁ±Î F5 Ë¢ÐÂ¼ü */"
@@ -48,7 +47,11 @@ Public Sub DisableBrowserFresh(ByVal wb As webBrowser)
     snippet = snippet & "            (event.ctrlKey && event.keyCode==82)){   /* Ctrl + R       */"
     snippet = snippet & "        event.keyCode=0;                                                 "
     snippet = snippet & "        event.returnValue=false;                                         "
+    snippet = snippet & "        return;                                                          "
     snippet = snippet & "    }                                                                    "
+    snippet = snippet & "    try {                                                                "
+    snippet = snippet & "    if (postDocKeydownHandler) { postDocKeydownHandler(event); }         "
+    snippet = snippet & "    } catch (e) { }                                                      "
     snippet = snippet & "};                                                                       "
 
     Call wb.Document.parentWindow.execScript(snippet)
