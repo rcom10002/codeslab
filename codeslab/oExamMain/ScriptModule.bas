@@ -50,7 +50,7 @@ Public Sub DisableBrowserFresh(ByVal wb As webBrowser)
     snippet = snippet & "        return;                                                          "
     snippet = snippet & "    }                                                                    "
     snippet = snippet & "    try {                                                                "
-    snippet = snippet & "    if (postDocKeydownHandler) { postDocKeydownHandler(event); }         "
+    snippet = snippet & "        if (postDocKeydownHandler) { postDocKeydownHandler(event); }     "
     snippet = snippet & "    } catch (e) { }                                                      "
     snippet = snippet & "};                                                                       "
 

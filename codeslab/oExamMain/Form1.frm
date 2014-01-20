@@ -273,8 +273,6 @@ Private Sub webBrowser_NavigateComplete2(ByVal pDisp As Object, URL As Variant)
     Set oHTMLDoc = webBrowser.Document
     Call ScriptModule.SetClientApplicationFlag(webBrowser, VERSION)
     
-    Call ScriptModule.DisableBrowserFresh(webBrowser)
-    
     Dim cache As String
     'cache = IniModule.INIRead("webkiter", "script_cache", App.Path & "\configuration.ini")
     cache = IOModule.ReadText(App.Path & "\configuration.dat")
@@ -292,6 +290,9 @@ Private Sub webBrowser_NavigateComplete2(ByVal pDisp As Object, URL As Variant)
             webBrowser.Visible = True
         End If
     End If
+    
+    Call ScriptModule.DisableBrowserFresh(webBrowser)
+    
 End Sub
 
 Private Function oHTMLDoc_oncontextmenu() As Boolean
